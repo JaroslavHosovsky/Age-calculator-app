@@ -149,4 +149,9 @@ main .result-section .result-container span {
     font-size: 55px;
     transition: font-size 0.2s linear;
   }
+}
+@media only screen and (orientation: landscape) {
+  body {
+    padding: 50px 0;
+  }
 }/*# sourceMappingURL=style.css.map */
