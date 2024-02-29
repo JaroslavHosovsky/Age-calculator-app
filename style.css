@@ -1,0 +1,152 @@
+/* === COLORS === */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+* input::-webkit-outer-spin-button,
+* input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 94%);
+}
+
+main {
+  width: 325px;
+  margin: auto;
+  padding: 35px 20px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px 20px 100px 20px;
+  transition: width 0.2s ease-in;
+  overflow: hidden;
+  box-shadow: 5px 5px 25px rgba(20, 20, 20, 0.092);
+}
+main form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 55px;
+  margin-bottom: 45px;
+  border-bottom: 1px solid hsl(0, 0%, 86%);
+  position: relative;
+}
+main form label,
+main form input {
+  display: block;
+  cursor: pointer;
+}
+main form label {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: hsl(0, 1%, 44%);
+}
+main form input {
+  max-width: 75px;
+  outline: none;
+  border: 1px solid hsl(0, 0%, 86%);
+  padding: 7px 10px;
+  font-size: 20px;
+  border-radius: 6px;
+  transition: all 0.2s linear;
+}
+main form input:focus {
+  border: 1px solid hsl(259, 100%, 65%);
+  transition: all 0.2s linear;
+}
+@keyframes imageAnimation {
+  from {
+    box-shadow: 0px 0px 2px hsl(259, 100%, 65%);
+  }
+  to {
+    box-shadow: 0px 0px 15px hsl(259, 100%, 65%);
+  }
+}
+@keyframes imageAnimationBlack {
+  from {
+    box-shadow: 0px 0px 2px hsl(0, 0%, 8%);
+  }
+  to {
+    box-shadow: 0px 0px 15px hsl(0, 0%, 8%);
+  }
+}
+main form img {
+  position: absolute;
+  border-radius: 50%;
+  width: 55px;
+  padding: 15px;
+  background-color: hsl(259, 100%, 65%);
+  bottom: -28px;
+  left: 50%;
+  transform: translate(-50%);
+  cursor: pointer;
+  transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  animation-name: imageAnimation;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+main form img:hover {
+  background-color: hsl(0, 0%, 8%);
+  transition: all 0.2s linear;
+  animation-name: imageAnimationBlack;
+}
+main .result-section .result-container {
+  font-size: 45px;
+  font-weight: 800;
+  font-style: italic;
+  transition: all 0.2s linear;
+  color: hsl(0, 0%, 8%);
+}
+main .result-section .result-container span {
+  color: hsl(259, 100%, 65%);
+}
+
+@media only screen and (max-width: 375px) {
+  body {
+    padding: 0 10px;
+  }
+  body .result-container {
+    font-size: 35px !important;
+  }
+}
+@media only screen and (min-width: 600px) {
+  main {
+    width: 500px;
+    margin: 0;
+    padding: 35px 40px;
+    transition: width 0.2s ease-in-out;
+  }
+  main form {
+    justify-content: flex-start;
+    gap: 20px;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+  }
+  main form input {
+    max-width: 100px;
+    transition: all 0.2s linear;
+  }
+  main form img {
+    bottom: -28px;
+    right: 0;
+    left: auto;
+    transform: none;
+    transition: all 0.2s linear;
+  }
+  main .result-section .result-container {
+    font-size: 55px;
+    transition: font-size 0.2s linear;
+  }
+}/*# sourceMappingURL=style.css.map */

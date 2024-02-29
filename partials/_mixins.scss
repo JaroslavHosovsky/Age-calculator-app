@@ -1,0 +1,56 @@
+@mixin labelStyle {
+  font: {
+    size: 13px;
+    weight: 700;
+  }
+  text-transform: uppercase;
+  color: $neutral_smokey_grey;
+}
+
+@mixin inputStyle {
+  max-width: 75px;
+  outline: none;
+  border: 1px solid $neutral_light_grey;
+  padding: 7px 10px;
+  font-size: 20px;
+  border-radius: 6px;
+  transition: all 0.2s linear;
+
+  &:focus {
+    border: 1px solid $primary_purple;
+    transition: all 0.2s linear;
+  }
+}
+
+@mixin imgStyle {
+  position: absolute;
+  border-radius: 50%;
+  width: 55px;
+  padding: 15px;
+  background-color: $primary_purple;
+  bottom: -28px;
+  left: 50%;
+  transform: translate(-50%);
+  cursor: pointer;
+  transition: all 0.2s linear;
+
+  &:hover {
+    background-color: $neutral_off_black;
+    transition: all 0.2s linear;
+    animation-name: imageAnimationBlack;
+  }
+}
+
+@mixin resultStyle {
+  font: {
+    size: 45px;
+    weight: 800;
+    style: italic;
+  }
+  transition: all 0.2s linear;
+  color: $neutral_off_black;
+
+  span {
+    color: $primary_purple;
+  }
+}
