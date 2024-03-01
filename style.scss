@@ -23,7 +23,7 @@ body {
 }
 
 main {
-  width: 325px;
+  width: 340px;
   margin: auto;
   padding: 35px 20px;
   background-color: $neutral_white;
@@ -36,10 +36,49 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 55px;
+    padding-bottom: 65px;
     margin-bottom: 45px;
     border-bottom: 1px solid $neutral_light_grey;
     position: relative;
+
+    .input-container {
+      position: relative;
+    }
+    .error-messages1 {
+      position: absolute;
+      p {
+        color: $primary_light_red;
+        font: {
+          size: 11px;
+          style: italic;
+        }
+        display: none;
+      }
+    }
+
+    .error-messages2 {
+      position: absolute;
+      p {
+        color: $primary_light_red;
+        font: {
+          size: 11px;
+          style: italic;
+        }
+        display: none;
+      }
+    }
+
+    .error-messages3 {
+      position: absolute;
+      p {
+        color: $primary_light_red;
+        font: {
+          size: 11px;
+          style: italic;
+        }
+        display: none;
+      }
+    }
 
     label,
     input {
@@ -103,19 +142,39 @@ main {
 
 @media only screen and (min-width: 600px) {
   main {
-    width: 500px;
+    width: 600px;
     margin: 0;
     padding: 35px 40px;
     transition: width 0.2s ease-in-out;
 
     form {
       justify-content: flex-start;
-      gap: 20px;
-      padding-bottom: 30px;
+      gap: 30px;
+      padding-bottom: 50px;
       margin-bottom: 20px;
 
+      .day-label {
+        &::after {
+          font-size: 12px;
+        }
+      }
+
+      .month-label {
+        &::after {
+          font-size: 12px;
+          width: 136px;
+        }
+      }
+
+      .year-label {
+        &::after {
+          font-size: 12px;
+        }
+      }
+
       input {
-        max-width: 100px;
+        max-width: 100%;
+        width: 125px;
         transition: all 0.2s linear;
       }
 

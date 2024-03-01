@@ -21,7 +21,7 @@ body {
 }
 
 main {
-  width: 325px;
+  width: 340px;
   margin: auto;
   padding: 35px 20px;
   background-color: hsl(0, 0%, 100%);
@@ -34,10 +34,40 @@ main form {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 55px;
+  padding-bottom: 65px;
   margin-bottom: 45px;
   border-bottom: 1px solid hsl(0, 0%, 86%);
   position: relative;
+}
+main form .input-container {
+  position: relative;
+}
+main form .error-messages1 {
+  position: absolute;
+}
+main form .error-messages1 p {
+  color: hsl(0, 100%, 67%);
+  font-size: 11px;
+  font-style: italic;
+  display: none;
+}
+main form .error-messages2 {
+  position: absolute;
+}
+main form .error-messages2 p {
+  color: hsl(0, 100%, 67%);
+  font-size: 11px;
+  font-style: italic;
+  display: none;
+}
+main form .error-messages3 {
+  position: absolute;
+}
+main form .error-messages3 p {
+  color: hsl(0, 100%, 67%);
+  font-size: 11px;
+  font-style: italic;
+  display: none;
 }
 main form label,
 main form input {
@@ -51,7 +81,7 @@ main form label {
   color: hsl(0, 1%, 44%);
 }
 main form input {
-  max-width: 75px;
+  max-width: 90px;
   outline: none;
   border: 1px solid hsl(0, 0%, 86%);
   padding: 7px 10px;
@@ -123,19 +153,30 @@ main .result-section .result-container span {
 }
 @media only screen and (min-width: 600px) {
   main {
-    width: 500px;
+    width: 600px;
     margin: 0;
     padding: 35px 40px;
     transition: width 0.2s ease-in-out;
   }
   main form {
     justify-content: flex-start;
-    gap: 20px;
-    padding-bottom: 30px;
+    gap: 30px;
+    padding-bottom: 50px;
     margin-bottom: 20px;
   }
+  main form .day-label::after {
+    font-size: 12px;
+  }
+  main form .month-label::after {
+    font-size: 12px;
+    width: 136px;
+  }
+  main form .year-label::after {
+    font-size: 12px;
+  }
   main form input {
-    max-width: 100px;
+    max-width: 100%;
+    width: 125px;
     transition: all 0.2s linear;
   }
   main form img {
